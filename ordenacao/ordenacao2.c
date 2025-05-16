@@ -1,3 +1,82 @@
+/*
+Descrição:
+Esta atividade de programação tem o objetivo de avaliar a eficiência de dois algoritmos
+de ordenação de ordem O(N·logN), baseados na estratégia Dividir para Conquistar.
+
+A eficiência do algoritmo QuickSort está diretamente ligada à escolha do elemento
+que servirá como pivô. Quando o último elemento do vetor é escolhido como pivô, vetores
+previamente ordenados (em ordem crescente ou decrescente) levam à complexidade
+quadrática (O(n²)) do algoritmo, aumentando significativamente o tempo de execução
+do código. Uma forma de diminuir a probabilidade do pior caso é escolher o pivô pelo
+método da mediana de três. Nesse método, são separados três elementos do vetor —
+por exemplo, o primeiro, o último e o do meio — e o pivô será o elemento com valor
+intermediário, ou mediano, entre os três. Por exemplo, se os elementos separados são
+a, b e c, tais que:
+
+a < b ≤ c
+
+O pivô deverá ser o elemento b.
+
+Além disso, muitas vezes, ao restar apenas uma pequena quantidade de elementos
+a ordenar, os algoritmos de ordenação mais simples podem se sair mais eficientes.
+Dessa forma, sistemas de ordenação que combinam dois ou mais algoritmos diferentes
+podem apresentar melhor desempenho computacional.
+
+Na atividade desta semana, compare três algoritmos de ordenação e conte, em cada
+um deles, o número total de comparações realizadas entre os valores dos elementos
+a serem ordenados. As versões a serem implementadas são as seguintes:
+1. MergeSort (MS)
+2. QuickSort com pivô mediana-de-três (QS-M3)
+3. QuickSort Híbrido (mediana-de-três + Insertion Sort para subarrays com até 5 elementos) (HÍBRIDO)
+
+Você deverá implementar as versões recursivas dos algoritmos QuickSort e MergeSort.
+Para a versão híbrida, deve-se usar o mesmo algoritmo QuickSort, porém, integrado à
+versão iterativa do Insertion Sort, conforme visto em sala.
+
+Seu programa deverá retornar, para cada algoritmo, as seguintes informações:
+- Em uma linha, o array de números inteiros devidamente ordenado.
+- Na linha seguinte, um número inteiro representando o total de comparações realizadas.
+
+Isso deve ser repetido para os três algoritmos, na ordem pré-determinada.
+
+Condições:
+1. Sua solução deve implementar as versões recursivas do MergeSort e do QuickSort;
+2. O array de entrada deverá ser ordenado três vezes: primeiro pelo MergeSort, depois
+   pelo QuickSort com mediana de três, e por fim pelo algoritmo híbrido;
+3. O código-fonte deve ser escrito em C ou C++;
+4. Toda memória alocada dinamicamente (em C/C++) deve ser desalocada;
+5. Nenhuma variável global deve ser utilizada.
+
+Regras para o cálculo do pivô e para a divisão do array de entrada:
+Para o QuickSort com Mediana-de-Três (QS-M3), o pivô deverá ser definido como o valor mediano
+entre os elementos: A[início], A[meio] e A[fim].
+
+Caso o subarray tenha quantidade ímpar de elementos, a posição do "meio" (para o cálculo da mediana
+de três, bem como para a divisão do domínio do MergeSort), deve ser definida da seguinte forma:
+
+    meio = início + (fim − início) / 2
+
+Se o subarray tiver quantidade par de elementos, a posição do meio deve ser definida com
+arredondamento para baixo. Exemplo: tamanho 4 implica que o índice do meio será igual a 1.
+No MergeSort, para N = 5, divide-se o arranjo em duas partes com 2 e 3 elementos, por exemplo.
+
+O particionamento do array no QuickSort deve seguir esta regra:
+Elementos ≤ pivô ficam à esquerda e elementos ≥ pivô ficam à direita.
+Caso não haja elementos menores que o pivô, não deve haver elementos à esquerda;
+nesse caso, o primeiro elemento do subarray deve ser o próprio pivô.
+
+Entrada:
+A primeira linha contém um número inteiro n que representa o tamanho do vetor a ser ordenado.
+A segunda linha contém os elementos, como números inteiros, do vetor de entrada,
+separados por espaço.
+
+Saída:
+A saída deve conter 6 (seis) linhas:
+- As duas primeiras exibem o array ordenado pelo algoritmo MergeSort e a quantidade de comparações;
+- As próximas duas linhas mostram o array ordenado pelo QuickSort com mediana de três e a contagem de comparações;
+- As duas últimas exibem o array ordenado pelo algoritmo híbrido e o número de comparações.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

@@ -1,3 +1,26 @@
+/*
+Descrição:
+Um grupo de amigos decidiu ordenar palavras usando uma chave especial que altera a ordem das letras no alfabeto tradicional. 
+As regras são:
+
+- Palavras podem conter letras maiúsculas e minúsculas, mas maiúsculas devem ser convertidas para minúsculas.
+- Todas as palavras devem ter o mesmo comprimento da maior, completadas com espaços em branco.
+- Cada palavra tem no máximo 20 caracteres.
+- A chave de ordenação contém as 26 letras do alfabeto em uma ordem especial.
+- Deve-se usar o algoritmo de ordenação apresentado pelo monitor, baseado em Counting Sort modificado.
+
+Entrada
+Linha 1: Número inteiro N — quantidade de palavras.
+Linha 2: Chave de ordenação com 26 letras.
+Linha 3: N palavras separadas por espaço.
+
+Saída
+Palavras originais convertidas para minúsculas, uma por linha, com um ponto final para impressão.
+Valor d: comprimento da maior palavra.
+d linhas com o vetor auxiliar C do Counting Sort após a soma prefixa, um para cada caractere.
+Palavras ordenadas, uma por linha, com os espaços adicionados, mas sem ponto final.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

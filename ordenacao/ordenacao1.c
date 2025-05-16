@@ -1,3 +1,36 @@
+/*
+Descrição:
+Implemente os algoritmos de ordenação quadráticos (Selection Sort, Bubble Sort e
+Insertion Sort) que realizem a ordenação de forma ascendente, com uma modificação:
+parar o processamento assim que o vetor estiver totalmente ordenado, retornando
+o número de comparações entre dois elementos da lista e de trocas de posição ou
+movimentações de dados executadas.
+
+Para comparações, considere todas as vezes, em qualquer trecho do código, em
+que se comparam dois elementos do vetor/lista a ordenar, sendo verdadeiro ou não o
+resultado dessa comparação (normalmente expresso com uma operação relacional do
+tipo "maior que" ou "menor que").
+
+Para trocas ou movimentações de dados, considere todas as execuções de swaps
+quando os índices dos dados a serem trocados são distintos. Dessa forma, quando
+os argumentos dos dados da função swap indicarem dois valores que representam a
+mesma posição, a função não deve ser executada e, consequentemente, não computar como uma troca.
+
+Para o algoritmo Insertion Sort, devem-se computar também como
+movimentações os deslocamentos efetuados nos dados do vetor, bem como a colocação
+do dado chave (key) na posição correta, quando essa nova posição for diferente da original.
+
+ENTRADA:
+• Um inteiro N (1 ≤ N ≤ 1000), representando o tamanho do vetor.
+• N inteiros distintos (cada um entre −10^5 e 10^5), representando os elementos do vetor, separados por um espaço em branco entre si.
+
+SAÍDA:
+Três (3) linhas, cada qual com dois inteiros, representando a quantidade de comparações
+e de trocas de elementos efetuadas até finalizar a ordenação. Cada linha corresponde a
+um algoritmo de ordenação, na seguinte ordem: Selection Sort, Bubble Sort e Insertion Sort.
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
